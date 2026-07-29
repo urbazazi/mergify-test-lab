@@ -1,12 +1,7 @@
-queue_rules:
-    - name: default
+pull_queue_rules:
+    - name: test rules
     conditions:
-      - "#approved-reviews-by >= 1"
-
- pull_request_rules:
-   - name:
-   conditions:
-      - "#approved-reviews-by >= 1"
-  actions:
-     - queue:
-        name: default
+      - base=main
+    actions:
+      - comment:
+          message: Aturan Berhasil Aktif!
